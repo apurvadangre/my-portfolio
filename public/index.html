@@ -3,21 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Apoorva - Frontend Developer Portfolio</title>
+    
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script> -->
+    
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animate on Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- css  -->
+
+    <style> 
+      
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px; /* equal to navbar height */
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    /* navbar  */
+
+    .navbar{
+        position: fixed;                 
+        top: 40px;                        /* distance from top */
+        left: 50%;                        
+        transform: translateX(-50%);      /* center horizontally */
+        width: 90%;                       /* responsive width */
+        max-width: 1200px;                /* prevent too wide on large screens */
+  
+        background: rgba(255, 255, 255, 0.2);  /* transparent glass effect */
+        border: 1px solid rgba(197, 197, 197, 0.6);
+        border-radius: 12px;
+        backdrop-filter: blur(9px);       
+        box-shadow: 0 8px 20px rgba(115, 115, 115, 0.15); /* shadow */
+        
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+        padding: 10px 20px;
+    }
+
+   
+    .navbar .nav-link {
+        color: #000; 
+        font-weight: 500;
+        padding: 10px 25px !important; 
+        transition: color 0.3s;
+        font-size: 21px;
+    }
+
+    .navbar .nav-link:hover {
+       color: #555;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-brand{
+        font-family: "Dancing Script", cursive;
+           font-optical-sizing: auto;
+           font-weight: bold;
+           font-style: normal;
+           font-size: 30px;
+           padding-left: 30px !important;
+    }
+
+
+
+    /* responsive  */
+
+    @media (min-width: 768px) {
+      body {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      body {
+        padding-left: 150px;
+        padding-right: 150px;
+        }
+    }
+
+    section {
+       scroll-margin-top: 100px; /* offsets anchor scrolling */
+    }
+
+
+
+
+    </style>
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid ">
+    <img src="../public/images/web-code.png" alt="Logo" width="35" height="35">
+    <a class="navbar-brand d-flex align-items-center ps-2 fw-bold" href="#home">Apoorva Portfolio</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item "><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item "><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item "><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item "><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
 
-    <h1> Welcome to Apooorvaaa...</h1>
+    <!-- <h1> Welcome to Apooorvaaa...</h1>
     <div class="fs-4 fw-bold">lets start portfolio</div>
 
 
     <h1>Welcome to portfolio</h1>
 
     <b>hehehehehehe</b>
-    <a href="../weather-app/weather-api.html" target="_blank">Weather API Link</a>
+    <a href="../weather-app/weather-api.html" target="_blank">Weather API Link</a> -->
 </body>
 </html>
