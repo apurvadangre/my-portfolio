@@ -153,6 +153,40 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
+
+    /* project section   */
+
+
+    .project-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .project-card img {
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      opacity: 0;
+      transition: 0.4s;
+    }
+    .project-card:hover .project-overlay {
+      opacity: 1;
+      cursor: pointer;
+    }
     
 
 
@@ -285,6 +319,48 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    
+    <!-- project section  -->
+
+    <section id="projects" class="bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 fw-bold">My Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100 border-0">
+                        <div class="card-body">
+                            <h3 class="h5">E-commerce Website</h3>
+                            <p class="text-muted">Built with modern web technologies</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="project-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/72065c3e-730c-4b40-a351-613a583b6cab.png" alt="Weather application showing current conditions and 5-day forecast with animated icons" class="project-img img-fluid w-100" />
+                        <div class="project-overlay text-white">
+                            <h3>Weather App</h3>
+                            <p>React.js app using OpenWeather API to display current and forecast weather data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="project-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8f866192-59ec-45bd-a2d9-a3d2863dc09c.png" alt="Task management dashboard with drag and drop functionality and priority labels" class="project-img img-fluid w-100" />
+                        <div class="project-overlay text-white">
+                            <h3>Task Manager</h3>
+                            <p>JavaScript application with local storage to manage tasks with drag-drop functionality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center pt-5 fs-5">
+            <span>As a fresher, these are my initial projects. More to come as I build my experience!</span>
         </div>
     </section>
 
