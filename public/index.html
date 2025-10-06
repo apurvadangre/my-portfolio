@@ -187,6 +187,50 @@
       opacity: 1;
       cursor: pointer;
     }
+
+    /* contact section  */
+    .info-box {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .info-box:hover {
+      /* transform: translateX(5px); */
+      cursor: pointer;
+    }
+    .info-box i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+    .social-icons img {
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      /* background: #f1f1f1; */
+      margin-top: 50px;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 2px solid rgb(187, 187, 187);
+    }
+
+    .container, .row {
+      margin-left: auto;
+      margin-right: auto;
+      overflow-x: hidden;
+    }
     
 
 
@@ -363,6 +407,42 @@
             <span>As a fresher, these are my initial projects. More to come as I build my experience!</span>
         </div>
     </section>
+
+
+
+
+<!-- contact section  -->
+
+
+<section id="contact" class="py-5" data-aos="fade-left">
+  <div class="container">
+    <h2 class="section-title">Let's Connect</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="fs-5 fw-bold">Get in Touch</p>
+        <p>I'm open to new opportunities and collaborations. Feel free to reach out!</p>
+        <div class="info-box"><i class="fa fa-envelope"></i> <a href="mailto:apoorvadangre1210@gmail.com">apoorvadangre1210@gmail.com</a></div>
+        <div class="info-box"><i class="fa fa-location-dot"></i> <a href="https://www.google.com/maps?q=Hyderabad,India" target="_blank">Hyderabad, India</a></div>
+      </div>
+      <div class="col-md-6 text-center">
+        <p class="fw-bold">Social Links</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/apurva-dangre" target="_blank">
+            <img src="../public/images/social (1).png" width="35" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/apurvadangre" target="_blank">
+            <img src="../public/images/github-sign.png" width="35" alt="GitHub">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Apoorva D. All rights reserved.<br>Built with HTML5, CSS3, Bootstrap.</p>
+</footer>
 
 
 
