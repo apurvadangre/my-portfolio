@@ -3,483 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoorva - Frontend Developer Portfolio</title>
+    <title>Apurva Dangre | Portfolio</title>
     
-    <!-- bootstrap -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
-    <!-- AOS Animate on Scroll -->
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"> -->
+    
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- css  -->
+    <link rel="stylesheet" href="../src/styles/portfolio.css">
 
-    <style> 
-      
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 80px; /* equal to navbar height */
-        max-width: 100%;
-        overflow-x: hidden;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-        max-width: 100%;
-        overflow-x: hidden;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    /* navbar  */
-
-    .navbar{
-        position: fixed;                 
-        top: 40px;                        /* distance from top */
-        left: 50%;                        
-        transform: translateX(-50%);      /* center horizontally */
-        width: 90%;                       /* responsive width */
-        max-width: 1200px;                /* prevent too wide on large screens */
-  
-        background: rgba(255, 255, 255, 0.2);  /* transparent glass effect */
-        border: 1px solid rgba(197, 197, 197, 0.6);
-        border-radius: 12px;
-        backdrop-filter: blur(9px);       
-        box-shadow: 0 8px 20px rgba(115, 115, 115, 0.15); /* shadow */
-        
-        z-index: 1000;
-        transition: all 0.3s ease-in-out;
-        padding: 10px 20px;
-    }
-
-   
-    .navbar .nav-link {
-      color: #000; 
-      font-weight: 500;
-      padding: 10px 25px !important; 
-      transition: color 0.3s;
-      font-size: 21px;
-    }
-
-    .navbar .nav-link:hover {
-      color: #555;
-    }
-
-    .navbar-toggler {
-      border: none;
-    }
-
-    .navbar-brand{
-      font-family: "Dancing Script", cursive;
-      font-optical-sizing: auto;
-      font-weight: bold;
-      font-style: normal;
-      font-size: 30px;
-      padding-left: 30px !important;
-    }
-
-    
-    /* home section  */
-
-    .hero {
-      text-align: center;
-      padding: 120px 20px 80px;
-      padding-top: 220px;
-    }
-    .hero .dancing-script {
-      font-family: "Dancing Script", cursive;
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .btn-custom {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border-radius: 30px;
-      transition: all 0.3s;
-    }
-    .btn-custom:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-    }
-
-    /* about section  */
-
-     .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      font-weight: bold;
-      position: relative;
-    }
-    .section-title::after {
-      content: "";
-      width: 70px;
-      height: 3px;
-      background: #000;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-
-
-    /* Skills  section*/
-
-    .skills-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.8rem;
-      height: 100%;
-      transition: all 0.3s ease;
-      border-left: 4px solid #000;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    .skills-card:hover {
-      transform: translateY(-8px);
-      cursor: pointer;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    .skill-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-
-    /* project section   */
-
-
-    .project-card {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: 0.3s;
-    }
-    .project-card img {
-      height: 220px;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-    .project-card:hover img {
-      transform: scale(1.05);
-    }
-    .project-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      opacity: 0;
-      transition: 0.4s;
-    }
-    .project-card:hover .project-overlay {
-      opacity: 1;
-      cursor: pointer;
-    }
-
-    /* contact section  */
-    .info-box {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .info-box:hover {
-      /* transform: translateX(5px); */
-      cursor: pointer;
-    }
-    .info-box i {
-      font-size: 1.5rem;
-      margin-right: 10px;
-    }
-    .social-icons img {
-      margin: 0 10px;
-      transition: transform 0.3s;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    footer {
-      padding: 30px 0;
-      text-align: center;
-      /* background: #f1f1f1; */
-      margin-top: 50px;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 2px solid rgb(187, 187, 187);
-    }
-
-    .container, .row {
-      margin-left: auto;
-      margin-right: auto;
-      overflow-x: hidden;
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* responsive  */
-
-    @media (min-width: 768px) {
-      body {
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      body {
-        padding-left: 150px;
-        padding-right: 150px;
-        }
-    }
-
-    section {
-      scroll-margin-top: 100px; /* offsets anchor scrolling */
-      padding-top: 70px;
-    }
-
-
-
-
-    </style>
+    <link rel="icon" href="../favicon.ico/favicon-32x32.png">
 </head>
-<body>
-
-    <nav class="navbar navbar-expand-lg ">
-  <div class="container-fluid ">
-    <img src="../public/images/web-code.png" alt="Logo" width="35" height="35">
-    <a class="navbar-brand d-flex align-items-center ps-2 fw-bold" href="#home">Apoorva Portfolio</a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item "><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item "><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item "><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item "><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 
-<!-- hero section  -->
- <section class="hero" id="home" data-aos="fade-up">
-  <h1 class="dancing-script">Hey, I'm Apoorva</h1>
-  <h2 class="fw-bold mt-3">UI Full Stack Developer</h2>
-  <p class="mt-3">I enjoy building modern, responsive, and user-friendly web applications.<br>
-  Passionate about turning ideas into interactive digital solutions.</p>
-  <a href="../public/doc/UI_Full_Stack_Developer.pdf" target="_blank" class="btn btn-dark btn-custom">View Resume</a>
-</section>
+<body data-bs-spy="scroll" data-bs-target="#navMenu" tabindex="0" data-bs-offset="100" >
 
+    <!-- header  -->
 
-<!-- about section  -->
-
-<section id="about" class="py-5 bg-light" data-aos="fade-right">
-  <div class="container text-center">
-    <h2 class="section-title">About Me</h2>
-    <div class="row align-items-center">
-      <div class="col-md-4 mb-3">
-        <img src="../public/images/cop-short.png" alt="Profile" class="img-fluid rounded-circle" style="max-width:200px;">
-      </div>
-      <div class="col-md-8 text-md-start">
-        <p>Hello! I'm Apoorva Dangre, a fresher Frontend Developer with a foundation in HTML5, CSS3, JavaScript, and React.js. I recently completed my degree in IT and have built practical projects to enhance my skills.</p>
-        <p>I love solving problems through clean UI design and efficient code. Outside of coding, I explore new technologies and keep improving myself as a developer.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- skill section  -->
-
-<section id="skills" class="py-5" data-aos="zoom-in">
-        <div class="container py-5">
-            <div class="text-center mb-5 animate-on-scroll">
-                <h2 class="section-title fw-bold">My Skills</h2>
-                <p class="lead">Technologies I work with</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4 animate-on-scroll">
-                    <div class="skills-card text-center">
-                        <div class="skill-icon">
-                            <i class="fab fa-html5 text-danger"></i>
-                        </div>
-                        <h3>Frontend Development</h3>
-                        <p>HTML5, CSS3, Bootstrap, JavaScript, TypeScript, Responsive Design</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 animate-on-scroll">
-                    <div class="skills-card text-center">
-                        <div class="skill-icon">
-                            <i class="fab fa-react text-primary"></i>
-                        </div>
-                        <h3>Frameworks</h3>
-                        <p>React.js, jQuery, SASS, Next.js (Basic), Express.js</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 animate-on-scroll">
-                    <div class="skills-card text-center">
-                        <div class="skill-icon">
-                            <i class="fas fa-tools text-secondary"></i>
-                        </div>
-                        <h3>Tools & More</h3>
-                        <p>Git/GitHub, VS Code, NPM, Postman</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- project section  -->
-
-    <section id="projects" class="bg-light" data-aos="fade-up">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="container">
-            <h2 class="section-title text-center mb-5 fw-bold">My Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card border-0 shadow-sm h-100 border-0">
-                        <div class="card-body">
-                            <h3 class="h5">E-commerce Website</h3>
-                            <p class="text-muted">Built with modern web technologies</p>
-                            <a href="#" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <div class="project-card">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/72065c3e-730c-4b40-a351-613a583b6cab.png" alt="Weather application showing current conditions and 5-day forecast with animated icons" class="project-img img-fluid w-100" />
-                        <div class="project-overlay text-white">
-                            <h3>Weather App</h3>
-                            <p>React.js app using OpenWeather API to display current and forecast weather data.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate-on-scroll">
-                    <div class="project-card">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8f866192-59ec-45bd-a2d9-a3d2863dc09c.png" alt="Task management dashboard with drag and drop functionality and priority labels" class="project-img img-fluid w-100" />
-                        <div class="project-overlay text-white">
-                            <h3>Task Manager</h3>
-                            <p>JavaScript application with local storage to manage tasks with drag-drop functionality.</p>
+            <a class="navbar-brand fs-3" href="#">APURVA DEV.</a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav align-items-left">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                    
+                     <!-- <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-dark rounded-pill px-4" href="#contact">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    
+    <!-- Main Container  --> 
+
+    <section id="home" class="container mt-5 pt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up">
+                <div class="card main-card shadow-lg  mt-5">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h1 class="fw-bold display-4 mb-3">Hi, I'm <span class="text-gradient">Apurva Dangre</span></h1>
+                                <p class="lead text-muted fs-4">UI Full Stack Developer</p>
+                                <hr class="w-25 mx-0 my-4 text-primary opacity-100">
+                                <p class="mb-4 fs-5 text-secondary">I build clean, responsive, and functional web applications with a focus on user experience and modern design patterns.</p>
+                                
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge rounded-pill text-bg-light border px-3 py-2">JavaScript ES6+</span>
+                                    <span class="badge rounded-pill text-bg-light border px-3 py-2">React 19</span>
+                                    <span class="badge rounded-pill text-bg-light border px-3 py-2">Node.js</span>
+                                    <span class="badge rounded-pill text-bg-light border px-3 py-2">Express.js</span>
+                                    <span class="badge rounded-pill text-bg-light border px-3 py-2">MongoDB</span>
+                                </div>
+                                
+                                <div class="d-flex gap-3">
+                                    <a href="#projects" class="btn btn-outline-dark btn-custom rounded-2 px-4 py-2">View Work</a>
+                                    <a href="https://drive.google.com/file/d/1foIbF_zqjQ_VIIoYxS2dDTWiB3KjgcM6/view?usp=sharing" target="_blank" class="btn btn-outline-dark  btn-custom px-4 py-2">Resume <i class="bi bi-arrow-right-short"></i></a>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-4 text-center d-none d-md-block">
+                                <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" alt="Developer Illustration" class="img-fluid">
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="text-center pt-5 fs-5">
-            <span>As a fresher, these are my initial projects. More to come as I build my experience!</span>
+
+    <!-- About Me  -->
+     
+    <section id="about" class="py-5" data-aos="fade-right">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title fw-bold">About Me</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                <!-- <div class="col-lg-5 text-center" data-aos="fade-right" > -->
+                    <div class="position-relative d-inline-block">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" alt="Profile" class="rounded-2 shadow-lg img-fluid" style="width: 300px; height: 300px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left"  >
+                    <span><i class="bi bi-code"></i></span>
+
+                    <h3 class="fw-bold mb-3">Fresher Frontend Developer</h3>
+                    <p class="fs-5 text-muted mb-4">Hello! I'm Apoorva, a passionate developer with a solid foundation in modern web technologies.</p>
+                    <p class="text-secondary lh-lg mb-3">
+                        I specialize in building responsive user interfaces using <strong>React.js</strong> and <strong>Bootstrap</strong>. 
+                        I recently graduated with a degree in IT and have been focusing on creating seamless user experiences through clean code and intuitive design.
+                        I am eager to launch my career and solve real-world problems.
+                    </p>
+                    <span><i class="bi bi-code-slash"></i></span>
+
+                </div>
+            </div>
         </div>
     </section>
 
 
 
+    <!-- skill  -->
 
-<!-- contact section  -->
-
-
-<section id="contact" class="py-5" data-aos="fade-left">
-  <div class="container">
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <p class="fs-5 fw-bold">Get in Touch</p>
-        <p>I'm open to new opportunities and collaborations. Feel free to reach out!</p>
-        <div class="info-box"><i class="fa fa-envelope"></i> <a href="mailto:apoorvadangre1210@gmail.com">apoorvadangre1210@gmail.com</a></div>
-        <div class="info-box"><i class="fa fa-location-dot"></i> <a href="https://www.google.com/maps?q=Hyderabad,India" target="_blank">Hyderabad, India</a></div>
-      </div>
-      <div class="col-md-6 text-center">
-        <p class="fw-bold">Social Links</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/apurva-dangre" target="_blank">
-            <img src="../public/images/social (1).png" width="35" alt="LinkedIn">
-          </a>
-          <a href="https://github.com/apurvadangre" target="_blank">
-            <img src="../public/images/github-sign.png" width="35" alt="GitHub">
-          </a>
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            
+            <div class="text-center mb-5" data-aos="fade-up" >
+                <h2 class="section-title fw-bold">Technical Skills</h2>
+                <p class="text-muted">Technologies I work with</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="100">
+                    <div class="skills-card text-center">
+                        <i class="fab fa-html5 fa-3x mb-4 text-danger"></i>
+                        <h4 class="fw-bold">Frontend</h4>
+                        <p class="text-muted mb-0">HTML5, CSS3, JavaScript (ES6+), TypeScript, Bootstrap 5, SASS</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skills-card text-center">
+                        <i class="fab fa-react fa-3x mb-4 text-primary"></i>
+                        <h4 class="fw-bold">Frameworks</h4>
+                        <p class="text-muted mb-0">React.js, Next.js, jQuery, Tailwind CSS</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skills-card text-center">
+                        <i class="fas fa-server fa-3x mb-4 text-success"></i>
+                        <h4 class="fw-bold">Backend & Tools</h4>
+                        <p class="text-muted mb-0">Node.js, Express.js, MongoDB, MySQL, Git, GitHub, VS Code, Postman</p>
+                    </div>
+                </div>
+            </div> 
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Apoorva D. All rights reserved.<br>Built with HTML5, CSS3, Bootstrap.</p>
-</footer>
+    </section>
 
 
 
+    <!-- project  -->
+
+    <section id="projects" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title fw-bold">My Projects</h2>
+                <p class="text-muted">Recent work I've completed</p>
+            </div>
+            
+        
+        <div class="row g-4 mt-2">
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <!-- <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100"> -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="../public/images/2110.i201.025.F.m004.c9.meteorology weather forecast isometric.jpg" alt="Weather App">
+                    </div>
+                    <div class="project-content">
+                        <h5>Weather Application</h5>
+                        <p class="small text-muted">React.js • API Integration</p>
+                        <p class="card-text">Real-time weather tracking using OpenWeather API with dynamic backgrounds.</p>
+                        <a href="https://weathersnap12.netlify.app/" target="_blank" class="btn btn-sm btn-outline-dark mt-3">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="../public/images/con2.jpg" alt="Task Manager">
+                    </div>
+                    <div class="project-content">
+                        <h5>Country Explorer</h5>
+                        <p class="small text-muted">JavaScript • LocalStorage</p>
+                        <p>A productivity app featuring drag-and-drop tasks and persistent data storage.</p>
+                        <a href="https://nextdestination12.netlify.app/" target="_blank" class="btn btn-sm btn-outline-dark">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="../public/images/con1.jpg" alt="E-commerce">
+                    </div>
+                    <div class="project-content">
+                        <h5>GreenShop</h5>
+                        <p class="small text-muted">Bootstrap 5 • Responsive</p>
+                        <p>A fully responsive shopping interface with product filtering and cart logic.</p>
+                        <a href="https://colorgradient1.netlify.app/" target="_blank" class="btn btn-sm btn-outline-dark">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center pt-5">
+            <span class="d-inline-block px-4 py-2 bg-white rounded-pill shadow-sm text-muted">
+                <i class="fas fa-code me-2"></i> As a fresher, these are my initial projects. More to come as I build my experience!
+            </span>
+        </div>
+        
+    </section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- footer  -->
 
     
+    
+    <footer id="contact" class="py-5 bg-dark text-white text-center position-relative">
+        <div class="container"  data-aos="fade-up">
+            <h2 class="mb-4 fw-bold">Get In Touch</h2>
+            <p class="mb-4 text-white-50 w-75 mx-auto">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!</p>
+            <a href="mailto:apoorvadangre1210@gmail.com" class="btn btn-light rounded-pill px-5 py-2 mb-5 fw-bold">Say Hello</a>
+            
+            <div class="social-links fs-3 mb-4">
+               
+                <a href="mailto:apoorvadangre1210@gmail.com"  class="text-white hover-lift px-4"><i class="bi bi-envelope-at"></i></a>
+                <a href="https://www.linkedin.com/in/apurva-dangre/" target="_blank" class="text-white me-4 hover-lift"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/apurvadangre" target="_blank" class="text-white me-4 hover-lift"><i class="bi bi-github"></i></a>
+            
+                </div>
+            <hr class="border-secondary opacity-25 w-50 mx-auto my-4">
+            <p class="small text-white-50 mb-0">&copy; 2026 Apurva Dangre | Portfolio</p>
+        </div>
+    </footer>
 
-    <!-- <h1> Welcome to Apooorvaaa...</h1>
-    <div class="fs-4 fw-bold">lets start portfolio</div>
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Close mobile menu on link click
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuToggle = document.getElementById('navMenu');
+        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                if (menuToggle.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // Add scrolled class to navbar for potential future styling (e.g. changing transparency)
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('shadow-sm');
+            } else {
+                document.querySelector('.navbar').classList.remove('shadow-sm');
+            }
+        });
+
+    
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
 
 
-    <h1>Welcome to portfolio</h1>
+    // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
 
-    <b>hehehehehehe</b>
-    <a href="../weather-app/weather-api.html" target="_blank">Weather API Link</a> -->
-
-<!-- AOS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 2000, once: true });
 </script>
 
-
-
-  </body>
+</body>
 </html>
