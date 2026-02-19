@@ -47,7 +47,35 @@
 
         .nav-link:hover, .nav-link.active {
             color: #0070f3 !important;
+            font-weight: 700;
         }
+
+
+        
+
+
+        .nav-link.active {
+    color: #0070f3 !important;
+    font-weight: 700;
+}
+.nav-link.active::after {
+    width: 80%;
+}
+
+
+
+        /* .nav-link.active {
+    color: #0070f3 !important;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    width: 80%;
+} */
+
+
+
+ 
 
         /* Underline animation for nav links */
         .nav-link::after {
@@ -62,7 +90,7 @@
             transform: translateX(-50%);
         }
 
-        .nav-link:hover::after {
+        .nav-link:hover::after,  .nav-link.active::after {
             width: 80%;
         }
 
